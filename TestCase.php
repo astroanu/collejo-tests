@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests;
+namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as IlluminateTestCase;
 use Collejo\Core\Contracts\Console\Kernel;
