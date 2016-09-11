@@ -15,7 +15,7 @@ class LoginTest extends TestCase
 {
     use DatabaseMigrations, DatabaseTransactions;
 
-    public function testLoginRoute()
+    /*public function testLoginRoute()
     {
         dd($this->call('GET', $this->baseUrl . '/auth/login'));
         $this->assertResponseOk($this->call('GET', '/auth/login'));
@@ -33,7 +33,7 @@ class LoginTest extends TestCase
     			'email' => $subject->email,
     			'password' => 123
     		]));
-    }
+    }*/
 
     public function setup()
     {
