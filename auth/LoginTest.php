@@ -17,7 +17,7 @@ class LoginTest extends TestCase
 
     public function testLoginRoute()
     {
-        dd($this->call('GET', '/auth/login'));
+        dd($this->call('GET', $this->baseUrl . '/auth/login'));
         $this->assertResponseOk($this->call('GET', '/auth/login'));
     }
 
