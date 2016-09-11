@@ -16,7 +16,7 @@ abstract class TestCase extends IlluminateTestCase
      *
      * @var string
      */
-    protected $baseUrl = 'http://localhost:8000';
+    protected $baseUrl = 'http://localhost';
 
     /**
      * Creates the application.
@@ -25,6 +25,8 @@ abstract class TestCase extends IlluminateTestCase
      */
     public function createApplication()
     {
+        $this->baseUrl = env('APP_URL');
+        
         $app = require __DIR__.'/../bootstrap/app.php';
 
         $app->make(Kernel::class)->bootstrap();
