@@ -66,9 +66,9 @@ abstract class TestCase extends IlluminateTestCase
 
         if (isset($b['id'])) { unset($b['id']); }
 
-        foreach($a as $k => $v) {
-            if (isset($b[$k])) {
-                if ($v !== $b[$k]) {
+        foreach($b as $k => $v) {
+            if (isset($a[$k])) {
+                if ($v != $a[$k]) {
                     return $this->assertTrue(false);
                 }
             }

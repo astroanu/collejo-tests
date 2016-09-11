@@ -1,12 +1,13 @@
 <?php
 
-namespace Tests;
+namespace Tests\Classes;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Collejo\Core\Contracts\Repository\ClassRepository;
 use Collejo\App\Models\Batch;
+use Tests\TestCase;
 
 class BatchTest extends TestCase
 {

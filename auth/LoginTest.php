@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Auth;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -9,6 +9,7 @@ use Collejo\App\Models\Media;
 use Collejo\App\Models\User;
 use Collejo\App\Models\Student;
 use Collejo\App\Models\StudentCategory;
+use Tests\TestCase;
 
 class LoginTest extends TestCase
 {
