@@ -61,8 +61,8 @@ abstract class TestCase extends IlluminateTestCase
 
     public function assertArrayValuesEquals($a, $b)
     {
-        $a = $a->toArray();
-        $b = $b->toArray();
+        $a = !is_array($a) ? $a->toArray() : $a;
+        $b = !is_array($b) ? $b->toArray() : $b;
 
         if (isset($a['id'])) { unset($a['id']); }        
 
@@ -80,8 +80,8 @@ abstract class TestCase extends IlluminateTestCase
     }
 
     public function assertArrayEquals($a, $b) {
-        $a = $a->toArray();
-        $b = $b->toArray();
+        $a = !is_array($a) ? $a->toArray() : $a;
+        $b = !is_array($b) ? $b->toArray() : $b;
 
         if (isset($a['id'])) { unset($a['id']); }        
 
