@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Classes;
+namespace Tests\Auth;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -12,7 +12,7 @@ use Collejo\App\Models\StudentCategory;
 use Tests\TestCase;
 use Auth;
 
-class StudentUserTest extends TestCase
+class AuthStudentTest extends TestCase
 {
     use DatabaseMigrations;
 
