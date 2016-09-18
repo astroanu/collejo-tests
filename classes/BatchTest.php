@@ -11,7 +11,7 @@ use Tests\TestCase;
 
 class BatchTest extends TestCase
 {
-    use DatabaseMigrations, DatabaseTransactions;
+    use DatabaseMigrations;
 
     private $classRepository;
 
