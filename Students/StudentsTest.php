@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Collejo\Core\Contracts\Repository\StudentRepository;
+use Collejo\App\Models\StudentCategory;
 use Collejo\App\Models\User;
 use Collejo\App\Models\Student;
 use Collejo\App\Models\Guardian;
@@ -22,6 +23,8 @@ class StudentsTest extends TestCase
 
     public function testAssignGuardian()
     {
+        factory(StudentCategory::class, 3)->create();
+
         $student = factory(User::class)->create()->student()->save(factory(Student::class)->make());
         $guardian = factory(User::class)->create()->guardian()->save(factory(Guardian::class)->make());
 
@@ -32,6 +35,8 @@ class StudentsTest extends TestCase
 
     public function testAssignToClass()
     {
+        factory(StudentCategory::class, 3)->create();
+
         $student = factory(User::class)->create()->student()->save(factory(Student::class)->make());
         $batch = factory(Batch::class)->create();
         $grade = factory(Grade::class)->create();
