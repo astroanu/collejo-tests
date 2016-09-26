@@ -5,7 +5,7 @@ namespace Tests\Auth;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Collejo\Core\Contracts\Repository\EmployeeRepository;
+use Collejo\App\Contracts\Repository\EmployeeRepository;
 use Collejo\App\Models\User;
 use Collejo\App\Models\Employee;
 use Collejo\App\Models\EmployeeCategory;

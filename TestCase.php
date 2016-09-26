@@ -3,8 +3,8 @@
 namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as IlluminateTestCase;
-use Collejo\Core\Contracts\Console\Kernel;
-use Collejo\Core\Contracts\Http\Kernel as Http;
+use Collejo\App\Contracts\Console\Kernel;
+use Collejo\App\Contracts\Http\Kernel as Http;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\Request;
 

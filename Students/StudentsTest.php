@@ -5,7 +5,7 @@ namespace Tests\Classes;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Collejo\Core\Contracts\Repository\StudentRepository;
+use Collejo\App\Contracts\Repository\StudentRepository;
 use Collejo\App\Models\StudentCategory;
 use Collejo\App\Models\User;
 use Collejo\App\Models\Student;
