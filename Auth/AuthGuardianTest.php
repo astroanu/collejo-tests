@@ -5,7 +5,7 @@ namespace Tests\Auth;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Collejo\Core\Contracts\Repository\GuardianRepository;
+use Collejo\App\Contracts\Repository\GuardianRepository;
 use Collejo\App\Models\User;
 use Collejo\App\Models\Guardian;
 use Tests\TestCase;
