@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Classes;
+namespace Tests\Students;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -33,6 +33,20 @@ class StudentsTest extends TestCase
         $this->assertTrue($this->studentRepository->findStudent($student->id)->guardians->contains($guardian->id));
     }
 
+    public function testRemoveGuardian()
+    {
+        factory(StudentCategory::class, 3)->create();
+
+        $student = factory(User::class)->create()->student()->save(factory(Student::class)->make());
+        $guardian = factory(User::class)->create()->guardian()->save(factory(Guardian::class)->make());
+
+        $this->studentRepository->assignGuardian($guardian->id, $student->id);
+
+        $this->studentRepository->removeGuardian($guardian->id, $student->id);
+
+        $this->assertFalse($this->studentRepository->findStudent($student->id)->guardians->contains($guardian->id));
+    }
+
     public function testAssignToClass()
     {
         factory(StudentCategory::class, 3)->create();
@@ -42,7 +56,7 @@ class StudentsTest extends TestCase
         $grade = factory(Grade::class)->create();
         $class = factory(Clasis::class)->create(['grade_id' => $grade->id]);
 
-        $this->studentRepository->assignToClass($batch->id, $grade->id, $class->id, $student->id);
+        $this->studentRepository->assignToClass($batch->id, $grade->id, $class->id, false, $student->id);
 
         $this->assertTrue($this->studentRepository->findStudent($student->id)->classes->contains($class->id));
     }
