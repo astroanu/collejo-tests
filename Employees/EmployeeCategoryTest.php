@@ -9,7 +9,7 @@ use Collejo\App\Contracts\Repository\EmployeeRepository;
 use Collejo\App\Models\EmployeeCategory;
 use Tests\TestCase;
 
-class EmployeeategoryTest extends TestCase
+class EmployeeCategoryTest extends TestCase
 {
     use DatabaseMigrations;
 
